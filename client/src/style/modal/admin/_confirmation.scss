@@ -1,0 +1,102 @@
+.confirmation {
+  position: fixed;
+  width: 100%;
+  background: rgba($color: black, $alpha: 0.5);
+  top: 0;
+  left: 0;
+  height: 100%;
+  right: 0;
+  z-index: 500;
+  color: black;
+  transition: 0.5s;
+  &__active {
+    opacity: 1;
+    visibility: visible;
+  }
+  &__inactive {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s 1s;
+  }
+
+  &__modal {
+    background-color: $white-color;
+    margin: 0 auto;
+    width: 40%;
+    transition: 0.2s 0.2s ease-in-out;
+    border-radius: $border-radius;
+    overflow-y: auto;
+    max-height: 100%;
+    &-header {
+      font-size: 2.5rem;
+      padding: 1.5rem;
+      border-bottom: 1px solid #ddd;
+    }
+    &-body {
+      font-size: 1.6rem;
+      border-bottom: 1px solid #ddd;
+      padding: 1.5rem;
+    }
+    &-action {
+      padding: 1.5rem;
+      display: flex;
+      justify-content: end;
+      button {
+        padding: 1rem 2.4rem;
+        margin-left: 2rem;
+        border-radius: $border-radius;
+        color: $white-color;
+        &:first-child {
+          background: $red-color;
+          border: 1px solid $red-color;
+        }
+        &:last-child {
+          background-color: $blue-color;
+          border: 1px solid $blue-color;
+        }
+      }
+    }
+    &-active {
+      transform: scale(1) translateY(5rem);
+    }
+    &-inactive {
+      transform: scale(0) translateY(0rem);
+    }
+  }
+}
+
+@keyframes activeContainer {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes activeModal {
+  50% {
+    transform: translateY(15rem);
+  }
+  100% {
+    transform: translateY(10rem);
+  }
+}
+
+@keyframes inactiveContainer {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes inactiveModal {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5rem);
+  }
+  100% {
+    transform: translateY(-1000px);
+  }
+}

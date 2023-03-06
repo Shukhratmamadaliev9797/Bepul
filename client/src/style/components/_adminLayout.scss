@@ -1,0 +1,14 @@
+.adminLayout {
+  position: absolute;
+  width: calc(100% - 230px);
+  background: #2a2b34;
+  min-height: 92vh;
+  left: 23rem;
+  top: 8vh;
+  color: $white-color;
+  &__container {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 4rem;
+  }
+}

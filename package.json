@@ -1,0 +1,11 @@
+{
+  "name": "bepul",
+  "version": "1.0.0",
+  "description": "this is web application where people can post their free items and other people can contact with each other and collect those items.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shukhrat Mamadaliev",
+  "license": "ISC"
+}

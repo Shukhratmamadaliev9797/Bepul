@@ -1,0 +1,62 @@
+.adminSidebar {
+  background: #2b2d35;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 23rem;
+  a {
+    color: $white-color;
+  }
+  &__container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__logo {
+    color: $white-color;
+    font-family: $header-font;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    padding: 2rem;
+    margin-top: 1rem;
+    text-transform: uppercase;
+
+    span {
+      color: $secondary-color;
+      margin-right: 1rem;
+    }
+  }
+  &__menu {
+    font-size: 1.8rem;
+    margin-top: 5rem;
+
+    li {
+      margin-bottom: 6rem;
+      a {
+        padding: 2rem;
+      }
+    }
+
+    .icon {
+      margin-right: 2rem;
+    }
+    &-active {
+      border-left: 5px solid $secondary-color;
+      border-top-right-radius: 10rem;
+    }
+  }
+  &__logout {
+    padding: 2rem;
+    button {
+      color: $white-color;
+      background-color: $secondary-color;
+      padding: 1rem 4rem;
+      border: none;
+      border-radius: $border-radius;
+      font-size: 1.7rem;
+    }
+  }
+}

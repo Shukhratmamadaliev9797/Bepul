@@ -1,0 +1,60 @@
+.dashLogin {
+  background: url("../../../images/dashLogin.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  padding-top: 15rem;
+  &__form {
+    color: $darkBlack-color;
+    width: 30%;
+    margin: 0 auto;
+    padding: 5rem;
+    background: #fff;
+    border-radius: $border-radius;
+  }
+  &__header {
+    text-align: center;
+    &-icon {
+      font-size: 6rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  &__body {
+    margin-top: 2rem;
+  }
+  &__inputBox {
+    margin-bottom: 2rem;
+    label {
+      display: block;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    input {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.4rem;
+      border-radius: $border-radius;
+      border: 1px solid $grey-color;
+    }
+  }
+  &__submitBox {
+    margin-top: 4rem;
+    button {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.8rem;
+      border-radius: $border-radius;
+      border: 1px solid $secondary-color;
+      background: $secondary-color;
+      color: #fff;
+    }
+  }
+  &__alert {
+    font-size: 1.5rem !important;
+  }
+}

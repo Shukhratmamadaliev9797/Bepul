@@ -1,0 +1,69 @@
+.localMap {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  background: linear-gradient(
+    266deg,
+    rgb(40, 66, 59) 0%,
+    rgb(9, 98, 73) 96%,
+    rgba(31, 70, 59, 1) 100%
+  );
+  &__text {
+    color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    form {
+      width: 80%;
+      margin: 0 auto;
+      h1 {
+        font-size: 4rem;
+        margin-bottom: 2rem;
+        font-family: "Archivo Black", sans-serif;
+        span {
+          color: #ffcf01;
+        }
+      }
+      p {
+        font-size: 2rem;
+        color: #ecf2ff;
+        margin-bottom: 4rem;
+      }
+    }
+  }
+  &__find {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    input {
+      padding: 1rem;
+      border: 1px solid #ddd;
+      font-size: 1.6rem;
+      color: #000;
+    }
+    input {
+      &:first-child {
+        border-top-left-radius: 0.3rem;
+        border-bottom-left-radius: 0.3rem;
+      }
+    }
+    button {
+      border: 1px solid #ffcf01;
+      background-color: #ffcf01;
+      border-top-right-radius: 0.3rem;
+      border-bottom-right-radius: 0.3rem;
+    }
+  }
+  &__marker {
+    &-img {
+      width: 10px !important;
+      height: 10px !important;
+      background-color: red;
+      img {
+        width: 10px !important;
+        height: 10px !important;
+
+        object-fit: cover;
+      }
+    }
+  }
+}

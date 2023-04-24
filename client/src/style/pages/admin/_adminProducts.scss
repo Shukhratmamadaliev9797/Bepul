@@ -1,0 +1,95 @@
+.adminProducts {
+  &__title {
+    @extend %adminTitle;
+  }
+  &__filter {
+    width: 100%;
+    background: #2b2d35;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    border-radius: $border-radius;
+    margin-bottom: 2rem;
+    input,
+    select {
+      padding: 1.5rem;
+      color: $white-color;
+      background: none;
+      border: 1px solid rgb(142, 138, 138);
+      border-radius: $border-radius;
+    }
+    button {
+      @extend %button;
+      font-size: 1.5rem;
+    }
+  }
+  &__table {
+    background: #2b2d35;
+    width: 100%;
+    text-align: left;
+    font-size: 1.4rem;
+    border-radius: $border-radius;
+    border-collapse: collapse;
+    th {
+      text-transform: uppercase;
+    }
+    td {
+      &:nth-child(6) {
+        span {
+          padding: 0.5rem 1rem;
+          border-radius: 1rem;
+        }
+        .selling {
+          background: $green-color;
+        }
+        .outofstock {
+          background: $red-color;
+        }
+        .hotselling {
+          background: $blue-color;
+        }
+      }
+      &:nth-child(8) {
+        text-align: center;
+      }
+      &:nth-child(10) {
+        span {
+          &:first-child {
+            margin-right: 2rem;
+          }
+        }
+      }
+    }
+    th,
+    td {
+      padding: 2rem;
+      color: $grey-color;
+    }
+    tr {
+      &:not(:last-child) {
+        border-bottom: 1px solid rgb(54, 53, 53);
+      }
+    }
+  }
+  &__pagination {
+  }
+}
+
+.adminProducts__pagination {
+  margin-top: 2rem;
+  nav {
+    display: flex;
+    justify-content: end;
+  }
+
+  ul {
+    button {
+      border: 1px solid #ddd;
+      color: $white-color !important;
+    }
+    div {
+      color: $white-color;
+    }
+  }
+}

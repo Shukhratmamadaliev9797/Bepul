@@ -1,0 +1,41 @@
+.myPosts {
+  &__tableContainer {
+    padding: 1.5rem !important;
+  }
+  &__table {
+    width: 100%;
+    font-size: 1.5rem;
+
+    thead {
+      tr {
+        background: #fff;
+        color: #444448;
+        border-bottom: 1px solid rgb(236, 234, 234);
+        th {
+          padding: 1rem;
+          border-radius: 0.5rem;
+        }
+      }
+    }
+    tbody {
+      tr {
+        padding: 2rem;
+        color: #57575b;
+        border-bottom: 1px solid rgb(236, 234, 234);
+
+        td {
+          padding: 2rem 1rem;
+
+          img {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+  &__editIcon {
+    margin-right: 2rem;
+  }
+}

@@ -1,0 +1,72 @@
+.addPost {
+  &__images {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 4rem 2rem;
+  }
+  &__image {
+    border: 1px dashed #ddd;
+    border-radius: 0.5rem;
+    height: 15rem;
+    width: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    &-icon {
+      font-size: 4rem;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__inputBox4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 1.5rem;
+    grid-column-gap: 2rem;
+    label {
+      display: block;
+      margin-bottom: 1.4rem;
+    }
+    input {
+      width: 100%;
+      border: 1px solid #ddd;
+      padding: 1rem;
+      border-radius: 0.5rem;
+    }
+  }
+  &__inputBox1 {
+    padding: 1.5rem;
+    label {
+      display: block;
+      margin-bottom: 1.4rem;
+    }
+    select {
+      width: 100%;
+      border: 1px solid #ddd;
+      padding: 1rem;
+      border-radius: 0.5rem;
+    }
+  }
+  &__inputBox2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    padding: 1.5rem;
+    font-size: 1.4rem;
+    label {
+      display: block;
+      margin-bottom: 1.4rem;
+    }
+    input,
+    select {
+      width: 100%;
+      border: 1px solid #ddd;
+      padding: 1rem;
+      border-radius: 0.5rem;
+    }
+  }
+}

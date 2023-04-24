@@ -1,0 +1,59 @@
+.profileEdit {
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  &__title {
+    border-bottom: 1px solid #ddd;
+    padding: 1.5rem;
+  }
+
+  &__inputBox2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    padding: 1.5rem;
+    font-size: 1.4rem;
+    label {
+      display: block;
+      margin-bottom: 1.4rem;
+    }
+    input {
+      width: 100%;
+      border: 1px solid #ddd;
+      padding: 1rem;
+      border-radius: 0.5rem;
+    }
+  }
+  &__inputBox1 {
+    display: grid;
+    padding: 1.5rem;
+    font-size: 1.4rem;
+    label {
+      display: block;
+      margin-bottom: 1.4rem;
+    }
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid #ddd;
+      padding: 1rem;
+      border-radius: 0.5rem;
+    }
+  }
+  &__button {
+    display: grid;
+    padding: 1.5rem;
+    button {
+      padding: 1rem;
+      border-radius: 0.5rem;
+      background: #ffea20;
+      font-size: 1.4rem;
+      color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__loader {
+    border: 1px solid #ddd;
+  }
+}

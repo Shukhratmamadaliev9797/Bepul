@@ -1,0 +1,154 @@
+.productDetails {
+  position: fixed;
+  width: 100%;
+  background: rgba($color: black, $alpha: 0.5);
+  top: 0;
+  left: 0;
+  height: 100%;
+  right: 0;
+  z-index: 500;
+  color: black;
+  transition: 0.5s;
+  &__active {
+    opacity: 1;
+    visibility: visible;
+  }
+  &__inactive {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s 1s;
+  }
+
+  &__modal {
+    background-color: $white-color;
+    margin: 0 auto;
+    width: 80%;
+    transition: 0.2s 0.2s ease-in-out;
+    border-radius: $border-radius;
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    color: $darkBlack-color;
+    &-left {
+      width: 100%;
+      height: 70vh;
+      border-radius: $border-radius;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+      }
+    }
+    &-close {
+      font-size: 2.5rem;
+      text-align: right;
+      cursor: pointer;
+    }
+    &-status {
+      font-size: 1.4rem;
+      color: green;
+      span {
+        font-weight: bold;
+        color: $darkBlack-color;
+      }
+    }
+    &-sku {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      span {
+        font-weight: bold;
+      }
+    }
+    &-price {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    &-name {
+      font-size: 3rem;
+    }
+    &-quantity {
+      margin-bottom: 2rem;
+      font-size: 1.2rem;
+      span {
+        margin-right: 1rem;
+      }
+      &-inStock {
+        background: $green-color;
+        color: $white-color;
+        padding: 0.5rem;
+        border-radius: $border-radius;
+      }
+      &-outofstuck {
+        background: $red-color;
+        color: $white-color;
+        padding: 0.5rem;
+        border-radius: $border-radius;
+      }
+    }
+    &-description {
+      font-size: 1.6rem;
+      color: $lightBlack-color;
+      margin-bottom: 2rem;
+    }
+    &-category {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      span {
+        font-weight: bold !important;
+      }
+    }
+    &-edit {
+      button {
+        @extend %button;
+        padding: 1rem;
+        font-size: 1.6rem;
+      }
+    }
+    &-active {
+      transform: scale(1) translateY(5rem);
+    }
+    &-inactive {
+      transform: scale(0) translateY(0rem);
+    }
+  }
+}
+
+@keyframes activeContainer {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes activeModal {
+  50% {
+    transform: translateY(15rem);
+  }
+  100% {
+    transform: translateY(10rem);
+  }
+}
+
+@keyframes inactiveContainer {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes inactiveModal {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5rem);
+  }
+  100% {
+    transform: translateY(-1000px);
+  }
+}

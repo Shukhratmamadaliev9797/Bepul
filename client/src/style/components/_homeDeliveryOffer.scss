@@ -1,0 +1,59 @@
+.deliveryOffer {
+  display: grid;
+  width: 100%;
+  height: 30vh;
+  margin-bottom: 5rem;
+  position: relative;
+  overflow: hidden;
+  &__text {
+  }
+  &__pic {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      266deg,
+      rgba(22, 36, 32, 0.5) 0%,
+      rgba(5, 75, 55, 0.5) 96%,
+      rgba(31, 70, 59, 0.5) 100%
+    );
+
+    z-index: 100;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 4rem;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      z-index: -11111;
+    }
+  }
+  &__step {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 4rem;
+    .icon {
+      font-size: 5rem;
+      color: #ffcf01;
+      margin-bottom: 1.5rem;
+    }
+    span {
+      color: #fff;
+      font-size: 2.4rem;
+      font-family: "Secular One", sans-serif;
+      margin-bottom: 2rem;
+    }
+    p {
+      color: #fff;
+      font-size: 1.5rem;
+    }
+  }
+}

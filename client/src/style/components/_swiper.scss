@@ -1,0 +1,66 @@
+.swiper {
+  width: 90%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.swiper-slide {
+  font-size: 18px;
+  // background: #1a1a40;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  border-radius: $border-radius;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.homeHeader {
+  margin-top: 2rem;
+  width: 100%;
+  height: 50vh;
+  &__slide {
+    &-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 20rem;
+        height: 20rem;
+      }
+      span {
+        color: aliceblue;
+        &:first-child {
+          color: $secondary-color;
+          font-family: $header-font;
+          font-size: 10rem;
+          span {
+            color: aliceblue;
+            font-size: 5rem;
+            text-transform: uppercase;
+          }
+        }
+        &:nth-child(2) {
+          font-size: 5rem;
+          font-weight: bolder;
+        }
+      }
+      button {
+        @extend %button;
+        margin-top: 2rem;
+        padding: 1rem 2.5rem;
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+.snackbar {
+  width: 60rem !important;
+  font-size: 1.5rem !important;
+}

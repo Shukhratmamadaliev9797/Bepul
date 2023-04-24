@@ -1,0 +1,44 @@
+.categories {
+  width: 100%;
+  // position: absolute;
+  margin-top: 4rem;
+  z-index: 1000000;
+
+  &__container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  &__category {
+    padding: 1rem;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ffcf01;
+    span {
+      font-size: 1.2rem;
+    }
+    p {
+      font-size: 1.2rem;
+      color: #878585;
+      span {
+        background-color: #ffcf01;
+        padding: 0.5rem;
+        border-radius: 50%;
+      }
+    }
+    img {
+      display: block;
+      width: 10rem;
+      margin: 0 auto;
+      height: 10rem;
+      object-fit: contain;
+    }
+  }
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}

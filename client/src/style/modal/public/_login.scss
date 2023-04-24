@@ -1,0 +1,72 @@
+.offcanvas {
+  width: 60rem !important;
+  display: flex !important;
+  justify-content: center !important;
+  //   align-items: center !important;
+  z-index: 1000000 !important;
+}
+
+.loginModal {
+  &__box {
+    width: 70%;
+    margin: 0 auto;
+    h2 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 5rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      input {
+        padding: 2rem;
+        margin-bottom: 2rem;
+        border: 1px solid #ddd;
+        background-color: transparent;
+        border-radius: 1rem;
+        font-size: 1.5rem;
+        transition: 0.4s linear;
+        &:focus {
+          border: 1px solid #865dff;
+          -webkit-box-shadow: -1px 0px 49px -17px rgba(134, 93, 255, 1);
+          -moz-box-shadow: -1px 0px 49px -17px rgba(134, 93, 255, 1);
+          box-shadow: -1px 0px 49px -17px rgba(134, 93, 255, 1);
+        }
+      }
+      a {
+        text-align: end;
+        margin-bottom: 2rem;
+        font-size: 1.3rem;
+      }
+      button {
+        background-color: #ffcf01;
+        border: none;
+        color: #fff;
+        padding: 1.6rem;
+        font-size: 1.5rem;
+        border-radius: 4rem;
+        margin-bottom: 2rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+    }
+    div {
+      text-align: center;
+      font-size: 1.5rem;
+      button {
+        border: none;
+        color: blue;
+        background-color: transparent;
+      }
+    }
+  }
+  &__error {
+    color: #bb2339;
+    margin-top: -2rem;
+    margin-bottom: 2rem;
+    text-align: left !important;
+  }
+}

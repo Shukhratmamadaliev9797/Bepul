@@ -1,0 +1,131 @@
+.footer {
+  background: #252425;
+  color: $white-color;
+  padding: 2rem 0;
+  margin-top: 5rem;
+  a {
+    color: rgb(211, 206, 206);
+  }
+  &__container {
+    padding: 2rem 0;
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    &-quickLinks {
+      span {
+        color: #ffcf01;
+        font-size: 2.2rem;
+        font-family: "Source Sans Pro", sans-serif;
+      }
+      ul {
+        margin-top: 1.5rem;
+        font-size: 1.5rem;
+        li {
+          margin-bottom: 0.8rem;
+        }
+      }
+    }
+    &-others {
+      span {
+        color: #ffcf01;
+        font-size: 2.2rem;
+        font-family: "Source Sans Pro", sans-serif;
+      }
+      ul {
+        margin-top: 1.5rem;
+        font-size: 1.5rem;
+        li {
+          margin-bottom: 0.8rem;
+        }
+      }
+    }
+    &-contactInfo {
+      span {
+        color: #ffcf01;
+        font-size: 2.2rem;
+        font-family: "Source Sans Pro", sans-serif;
+      }
+      ul {
+        margin-top: 1.5rem;
+        font-size: 1.5rem;
+        li {
+          margin-bottom: 0.8rem;
+          color: rgb(211, 206, 206);
+        }
+      }
+      &-icon {
+        margin-right: 1rem;
+        color: #ffcf01;
+      }
+    }
+    &-social {
+      span {
+        color: #ffcf01;
+        font-size: 2.2rem;
+        font-family: "Source Sans Pro", sans-serif;
+      }
+      ul {
+        margin-top: 1.5rem;
+        display: flex;
+        li {
+          margin-right: 1.5rem;
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+  &__bottom {
+    padding: 2rem 0;
+    border-top: 1px solid rgb(81, 80, 80);
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0rem auto;
+    div {
+      display: flex;
+      align-items: center;
+    }
+    h1 {
+      font-family: #4f78f9;
+      span {
+        display: block;
+      }
+    }
+    p {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1224px) {
+  .footer {
+    &__container {
+      padding: 0;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+      div {
+        margin-top: 2rem;
+      }
+    }
+
+    &__copyright {
+      margin-top: 2rem;
+    }
+
+    &__bottom {
+      width: 90%;
+      flex-flow: wrap;
+      text-align: center;
+      justify-content: center;
+
+      p {
+        margin: 15px auto;
+        width: 80%;
+      }
+    }
+  }
+}

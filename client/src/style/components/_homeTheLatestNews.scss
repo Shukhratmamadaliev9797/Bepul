@@ -1,0 +1,74 @@
+.homeNews {
+  width: 100%;
+  padding: 5rem 0;
+  &__container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 4rem;
+    h1 {
+      font-family: "Secular One", sans-serif;
+      letter-spacing: 0.05rem;
+      margin-bottom: 2rem;
+      font-size: 2.8rem;
+      span {
+        background: #ffcf01;
+        padding: 1rem 0.5rem;
+        border-radius: 50%;
+      }
+    }
+    p {
+      font-size: 1.5rem;
+      color: #4e4d4d;
+    }
+  }
+  &__newslist {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 4rem;
+  }
+  &__news {
+    border-radius: 0.5rem;
+    width: 100%;
+    overflow: hidden;
+
+    border: 1px solid #e7e6e6;
+    &-content {
+      padding: 2rem;
+      h3 {
+        font-size: 2rem;
+        line-height: 3rem;
+        margin-bottom: 2rem;
+      }
+      p {
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+      }
+    }
+    &-action {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      a {
+        color: #ffcf01;
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+    }
+  }
+  &__viewMore {
+    width: 100%;
+    text-align: center;
+    margin-top: 6rem;
+    a {
+      font-size: 1.5rem;
+      padding: 1rem 3rem;
+      color: #000;
+      font-weight: bold;
+      border-radius: 2rem;
+      border: 1px solid #ffcf01;
+    }
+  }
+}

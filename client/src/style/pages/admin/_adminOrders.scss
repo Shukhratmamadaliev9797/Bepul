@@ -1,0 +1,45 @@
+.adminOrders {
+  &__table {
+    background: #2b2d35;
+    width: 100%;
+    text-align: left;
+    font-size: 1.4rem;
+    border-radius: $border-radius;
+    border-collapse: collapse;
+    th {
+      text-transform: uppercase;
+    }
+    td {
+      &:nth-child(7) {
+        span {
+          background: green;
+          padding: 0.5rem 1rem;
+          border-radius: 1rem;
+        }
+      }
+      &:nth-child(8) {
+        select {
+          padding: 0.5rem;
+          border-radius: $border-radius;
+          color: $white-color;
+          background: none;
+          border: 1px solid rgb(142, 138, 138);
+        }
+      }
+
+      &:nth-child(9) {
+        text-align: center;
+      }
+    }
+    th,
+    td {
+      padding: 2rem;
+      color: $grey-color;
+    }
+    tr {
+      &:not(:last-child) {
+        border-bottom: 1px solid rgb(54, 53, 53);
+      }
+    }
+  }
+}

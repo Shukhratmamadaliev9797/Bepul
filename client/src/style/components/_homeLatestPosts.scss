@@ -1,0 +1,123 @@
+.theLatestPosts {
+  width: 100%;
+  padding: 2rem 0;
+
+  &__container {
+    width: 80%;
+    margin: 10rem auto 10rem;
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h1 {
+      font-family: "Secular One", sans-serif;
+      letter-spacing: 0.05rem;
+
+      font-size: 2.8rem;
+      span {
+        background: #ffcf01;
+        padding: 1rem 0.5rem;
+        border-radius: 50%;
+      }
+    }
+    p {
+      font-size: 1.3rem;
+      color: #4e4d4d;
+    }
+  }
+  &__posts {
+    margin-top: 4rem;
+  }
+  &__swiperNavigation {
+    display: flex;
+    &-button {
+      border: 1px solid #ddd;
+      margin-left: 1.5rem;
+      font-size: 2.5rem;
+      padding: 0 1rem;
+      border-radius: 0.5rem;
+    }
+    &-active {
+      color: #ffcf01;
+      border: 1px solid #ffcf01;
+    }
+  }
+  &__post {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #f3f0f0;
+    a {
+      color: #605e7e !important;
+    }
+    div {
+      margin: 1rem;
+    }
+    &-content {
+      display: flex;
+      justify-content: space-between;
+      min-height: 15rem;
+      flex-direction: column;
+    }
+    &-location {
+      font-size: 1.3rem;
+      color: #605e7e;
+    }
+    &-description {
+      font-size: 1.3rem;
+      color: #605e7e;
+    }
+    &-author {
+      font-size: 1.4rem;
+      color: #605e7e;
+      border-top: 1px solid #f3f0f0;
+      padding-top: 1rem;
+    }
+    &-img {
+      position: relative;
+      width: 100%;
+      height: 20rem;
+
+      margin: 0 !important;
+      &::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          266deg,
+          rgba(22, 36, 32, 0.2) 0%,
+          rgba(5, 75, 55, 0.2) 96%,
+          rgba(31, 70, 59, 0.2) 100%
+        );
+        z-index: 100000;
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__seeMore {
+    display: flex !important;
+    width: 100%;
+    height: 370px !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border: 1px solid #f3f0f0;
+    min-height: 41.5rem;
+    .fa-eye {
+      font-size: 7rem;
+      color: #4e4d4d;
+      margin-bottom: 3rem;
+    }
+    span {
+      color: #4e4d4d;
+    }
+  }
+}

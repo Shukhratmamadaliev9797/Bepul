@@ -77,6 +77,7 @@ export default function LocalMap() {
             mapboxAccessToken="pk.eyJ1Ijoic2h1a2hyYXRtYW1hZGFsaWV2OTc5NyIsImEiOiJjbGZ0YXdrdTcwM2Q5M2Vsb3Z2dzZ6Nm9wIn0.Tz-Xivprszwl3QEF4aM7vw"
           >
             {postLists.map((post) => {
+              if (isNaN(post.lat) || isNaN(post.lng)) return null;
               return (
                 <>
                   <Marker

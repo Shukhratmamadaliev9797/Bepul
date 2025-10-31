@@ -48,22 +48,20 @@ export default function TheLatestPosts() {
           </div>
           <div className="theLatestPosts__swiperNavigation">
             <div
-              className={`theLatestPosts__swiperNavigation-button ${
-                prevActive ? "theLatestPosts__swiperNavigation-active" : ""
-              }`}
+              className={`theLatestPosts__swiperNavigation-button ${prevActive ? "theLatestPosts__swiperNavigation-active" : ""
+                }`}
               ref={prevRef}
               onClick={prevActiveHandler}
             >
-              <i class="fa-solid fa-chevron-left"></i>
+              <i className="fa-solid fa-chevron-left"></i>
             </div>
             <div
-              className={`theLatestPosts__swiperNavigation-button ${
-                nextActive ? "theLatestPosts__swiperNavigation-active" : ""
-              }`}
+              className={`theLatestPosts__swiperNavigation-button ${nextActive ? "theLatestPosts__swiperNavigation-active" : ""
+                }`}
               ref={nextRef}
               onClick={nextActiveHandler}
             >
-              <i class="fa-solid fa-chevron-right"></i>
+              <i className="fa-solid fa-chevron-right"></i>
             </div>
           </div>
         </div>
@@ -109,11 +107,11 @@ export default function TheLatestPosts() {
                         {post.title}
                       </div>
                       <div className="theLatestPosts__post-location">
-                        <i class="fas fa-map-marker-alt"></i> {post.city}{" "}
+                        <i className="fas fa-map-marker-alt"></i> {post.city}{" "}
                         {post.postcode}
                       </div>
                       <div className="theLatestPosts__post-description">
-                        {post.description.substring(0, 100)}...
+                        {post.description?.substring(0, 100) || "No description"}...
                       </div>
                       <div className="theLatestPosts__post-author">
                         <b>Posted by</b> {post.poster}
@@ -128,7 +126,7 @@ export default function TheLatestPosts() {
             ""
           ) : (
             <SwiperSlide className="theLatestPosts__seeMore">
-              <i class="far fa-eye"></i>
+              <i className="far fa-eye"></i>
               <span>See More</span>
             </SwiperSlide>
           )}

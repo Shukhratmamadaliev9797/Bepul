@@ -3,17 +3,17 @@ import React from "react";
 export default function Loader({ height }) {
   return (
     <div className="loader__container" style={{ minHeight: height + "vh" }}>
-      <div class="scene">
-        <div class="cube-wrapper">
-          <div class="cube">
-            <div class="cube-faces">
-              <div class="cube-face shadow"></div>
-              <div class="cube-face bottom"></div>
-              <div class="cube-face top"></div>
-              <div class="cube-face left"></div>
-              <div class="cube-face right"></div>
-              <div class="cube-face back"></div>
-              <div class="cube-face front"></div>
+      <div className="scene">
+        <div className="cube-wrapper">
+          <div className="cube">
+            <div className="cube-faces">
+              <div className="cube-face shadow"></div>
+              <div className="cube-face bottom"></div>
+              <div className="cube-face top"></div>
+              <div className="cube-face left"></div>
+              <div className="cube-face right"></div>
+              <div className="cube-face back"></div>
+              <div className="cube-face front"></div>
             </div>
           </div>
         </div>

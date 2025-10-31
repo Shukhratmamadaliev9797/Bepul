@@ -48,22 +48,20 @@ export default function ThefeaturedPosts() {
           </div>
           <div className="theLatestPosts__swiperNavigation">
             <div
-              className={`theLatestPosts__swiperNavigation-button ${
-                prevActive ? "theLatestPosts__swiperNavigation-active" : ""
-              }`}
+              className={`theLatestPosts__swiperNavigation-button ${prevActive ? "theLatestPosts__swiperNavigation-active" : ""
+                }`}
               ref={prevRef}
               onClick={prevActiveHandler}
             >
-              <i class="fa-solid fa-chevron-left"></i>
+              <i className="fa-solid fa-chevron-left"></i>
             </div>
             <div
-              className={`theLatestPosts__swiperNavigation-button ${
-                nextActive ? "theLatestPosts__swiperNavigation-active" : ""
-              }`}
+              className={`theLatestPosts__swiperNavigation-button ${nextActive ? "theLatestPosts__swiperNavigation-active" : ""
+                }`}
               ref={nextRef}
               onClick={nextActiveHandler}
             >
-              <i class="fa-solid fa-chevron-right"></i>
+              <i className="fa-solid fa-chevron-right"></i>
             </div>
           </div>
         </div>
@@ -110,7 +108,7 @@ export default function ThefeaturedPosts() {
                         {post.title}
                       </div>
                       <div className="TheFuturedPosts__post-location">
-                        <i class="fas fa-map-marker-alt"></i> {post.city}{" "}
+                        <i className="fas fa-map-marker-alt"></i> {post.city}{" "}
                         {post.postcode}
                       </div>
                       <div className="TheFuturedPosts__post-description">
@@ -129,7 +127,7 @@ export default function ThefeaturedPosts() {
             ""
           ) : (
             <SwiperSlide className="theLatestPosts__seeMore">
-              <i class="far fa-eye"></i>
+              <i className="far fa-eye"></i>
               <span>See More</span>
             </SwiperSlide>
           )}

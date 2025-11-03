@@ -13,11 +13,11 @@ export default function ProfileNavbar() {
 
   const postUpdate = useSelector((state) => state.postUpdate);
   const { success: updateSuccess, successUpdateMessage } = postUpdate;
-  const notifySuccessCreate = (message) => toast.success(message);
+
   const notifySuccessUpdate = (message) => toast.success(message);
   useEffect(() => {
     if (successCreate) {
-      notifySuccessCreate(successMessage);
+      // notifySuccessCreate(successMessage);
     }
     if (updateSuccess) {
       notifySuccessUpdate(successUpdateMessage);

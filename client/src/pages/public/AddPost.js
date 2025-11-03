@@ -208,7 +208,7 @@ export default function AddPost() {
 
   return (
     <>
-      <ToastContainer
+      {/* <ToastContainer
         position="bottom-left"
         autoClose={5000}
         hideProgressBar={false}
@@ -220,7 +220,7 @@ export default function AddPost() {
         pauseOnHover
         theme="colored"
         className="snackbar"
-      />
+      /> */}
       <div className="profileEdit">
         <div className="profileEdit__title">
           <h3>Add New Post</h3>

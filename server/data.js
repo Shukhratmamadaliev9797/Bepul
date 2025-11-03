@@ -9,13 +9,6 @@ const data = {
       phone: "+7754234324",
       password: bcrypt.hashSync("1111", 8),
     },
-    {
-      firstName: "Zilola",
-      lastName: "Mamadalieva",
-      email: "admin@gmail.com",
-      phone: "+7754234324",
-      password: bcrypt.hashSync("2222s", 8),
-    },
   ],
   staff: [
     {

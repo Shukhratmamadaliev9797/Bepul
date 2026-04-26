@@ -43,7 +43,9 @@ export default function Messages() {
   }, [notificationCount]);
 
   useEffect(() => {
-    socket.current = io("ws://localhost:8900");
+    const socketUrl =
+      process.env.REACT_APP_SOCKET_URL || window.location.origin;
+    socket.current = io(socketUrl);
     socket.current.on("getMessage", (data) => {
       setArrivalMessage({
         sender: data.senderId,

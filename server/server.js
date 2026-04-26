@@ -1,18 +1,26 @@
 import express from "express";
+import http from "http";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import path from "path";
 import cors from "cors";
+import { Server } from "socket.io";
 import userRouter from "./routers/userRouter.js";
 import uploadRouter from "./routers/uploadRouter.js";
 import postRouter from "./routers/postRouter.js";
 import conversationRouter from "./routers/conversationRouter.js";
 import messageRouter from "./routers/messageRouter.js";
 
-dotenv.config({ path: path.resolve("../.env") });
+dotenv.config({ path: path.resolve(".env") });
 
 //initiate express
 const app = express();
+const server = http.createServer(app);
+const io = new Server(server, {
+  cors: {
+    origin: process.env.CORS_ORIGIN || true,
+  },
+});
 
 //parsing incoming JSON requests
 app.use(express.json());
@@ -45,8 +53,45 @@ app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });
 });
 
+// Socket.IO
+let users = [];
+
+const addUser = (userId, socketId) => {
+  if (!users.some((user) => user.userId === userId)) {
+    users.push({ userId, socketId });
+  }
+};
+
+const removeUser = (socketId) => {
+  users = users.filter((user) => user.socketId !== socketId);
+};
+
+const getUser = (userId) => users.find((user) => user.userId === userId);
+
+io.on("connection", (socket) => {
+  socket.on("addUser", (userId) => {
+    addUser(userId, socket.id);
+    io.emit("getUsers", users);
+  });
+
+  socket.on("sendMessage", ({ senderId, receiverId, text }) => {
+    const user = getUser(receiverId);
+    if (user) {
+      io.to(user.socketId).emit("getMessage", {
+        senderId,
+        text,
+      });
+    }
+  });
+
+  socket.on("disconnect", () => {
+    removeUser(socket.id);
+    io.emit("getUsers", users);
+  });
+});
+
 //server port
 const port = process.env.PORT || 5000;
-app.listen(port, () => {
+server.listen(port, () => {
   console.log(`This server is running at ${port}`);
 });

@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: bepul-app
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: node server/server.js
+    healthCheckPath: /
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: MONGODB_URL
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: CORS_ORIGIN
+        sync: false
+      - key: AWS_REGION
+        sync: false
+      - key: AWS_ACCESS_KEY
+        sync: false
+      - key: AWS_SECRET_KEY
+        sync: false
+      - key: AWS_BUCKET_NAME
+        sync: false
+      - key: AWS_CONFIG
+        sync: false
+      - key: REACT_APP_SOCKET_URL
+        sync: false

@@ -61,7 +61,7 @@ export default function AddPost() {
     bodyFormData.append("image", file);
     setLoadingUpload1(true);
     try {
-      const { data } = await axios.post("/api/uploads/s3", bodyFormData, {
+      const { data } = await axios.post("/api/uploads", bodyFormData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${userInfo.token}`,
@@ -80,7 +80,7 @@ export default function AddPost() {
     bodyFormData.append("image", file);
     setLoadingUpload2(true);
     try {
-      const { data } = await axios.post("/api/uploads/s3", bodyFormData, {
+      const { data } = await axios.post("/api/uploads", bodyFormData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${userInfo.token}`,
@@ -99,7 +99,7 @@ export default function AddPost() {
     bodyFormData.append("image", file);
     setLoadingUpload3(true);
     try {
-      const { data } = await axios.post("/api/uploads/s3", bodyFormData, {
+      const { data } = await axios.post("/api/uploads", bodyFormData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${userInfo.token}`,
@@ -118,7 +118,7 @@ export default function AddPost() {
     bodyFormData.append("image", file);
     setLoadingUpload4(true);
     try {
-      const { data } = await axios.post("/api/uploads/s3", bodyFormData, {
+      const { data } = await axios.post("/api/uploads", bodyFormData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${userInfo.token}`,

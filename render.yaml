@@ -8,22 +8,20 @@ services:
     healthCheckPath: /
     envVars:
       - key: NODE_VERSION
-        value: 20
+        value: 16.15.1
       - key: MONGODB_URL
         sync: false
       - key: JWT_SECRET
         sync: false
       - key: CORS_ORIGIN
         sync: false
-      - key: AWS_REGION
+      - key: CLOUD_NAME
         sync: false
-      - key: AWS_ACCESS_KEY
+      - key: CLOUD_API_KEY
         sync: false
-      - key: AWS_SECRET_KEY
+      - key: CLOUD_API_SECRET
         sync: false
-      - key: AWS_BUCKET_NAME
-        sync: false
-      - key: AWS_CONFIG
+      - key: CLOUDINARY_FOLDER
         sync: false
       - key: REACT_APP_SOCKET_URL
         sync: false
